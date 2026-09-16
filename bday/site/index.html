@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Happy Birthday, Tatiana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stars" aria-hidden="true"></div>
+<div id="progress-rail"><div id="progress-fill"></div></div>
+
+<section id="screen-gate" class="gate-screen active">
+  <p class="eyebrow">A Little Something</p>
+  <h1 class="elegant-title">For You</h1>
+  <p class="subtitle">Type your name to open it</p>
+  <form id="gateForm" class="gate-form">
+    <label for="nameInput" class="sr-only">Your name</label>
+    <input type="text" id="nameInput" class="name-input" placeholder="Your name" autocomplete="off" autocapitalize="words">
+    <button type="submit" class="play-btn">Unlock</button>
+  </form>
+  <p class="gate-error" id="gateError" hidden>this one's just for Tatiana &mdash; try again</p>
+</section>
+
+<div class="story">
+
+  <section id="screen-envelope" class="screen" data-section>
+    <h1 class="elegant-title">Happy Birthday, Tatiana!</h1>
+    <p class="subtitle">You've got mail &mdash; tap the seal to open it</p>
+    <div class="envelope-container">
+      <div class="envelope" id="envelope">
+        <div class="envelope-back"></div>
+        <div class="envelope-letter">
+          <p>I have known you for a while now, but it still feels like I've known you for five minutes.</p>
+          <p>Every moment with you goes by that fast &mdash; and I wouldn't want it any other way.</p>
+          <p>I made you something. Happy birthday.</p>
+        </div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-pocket"></div>
+        <button class="wax-seal" id="waxSeal" aria-label="Open envelope">
+          <span>B</span>
+        </button>
+      </div>
+    </div>
+    <p class="hint" id="envelopeHint">click the seal</p>
+    <div class="scroll-cue" id="envelopeScrollCue" aria-hidden="true" hidden>&#8595;</div>
+  </section>
+
+  <section class="screen" data-section>
+    <p class="eyebrow">On Repeat For You</p>
+    <div class="vinyl-player">
+      <div class="record" id="record">
+        <div class="record-label">
+          <div class="eq-bars" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        </div>
+      </div>
+      <div class="tonearm" id="tonearm"></div>
+    </div>
+    <div class="track-info">
+      <p class="track-title">Say What (feat. PARTYNEXTDOOR)</p>
+      <p class="track-artist">Trippie Redd</p>
+    </div>
+    <button class="play-btn" id="playBtn">&#9658; Play</button>
+    <p class="music-caption">this one's been on repeat for you &mdash; it'll keep playing as you scroll</p>
+    <audio id="bg-music" src="assets/song.mp3" preload="none" loop></audio>
+    <div class="scroll-cue" aria-hidden="true">&#8595;</div>
+  </section>
+
+  <section class="screen" data-section>
+    <p class="eyebrow">Our Moment</p>
+    <div class="photo-frame" id="photoFrame">
+      <img src="assets/photo.jpg" alt="A sunset drive together, sky fading from gold to violet">
+    </div>
+    <p class="memory-caption">That drive, the sky doing its whole gold-to-violet thing, you bundled up in pink next to me. Still my favourite kind of quiet.</p>
+    <div class="scroll-cue" aria-hidden="true">&#8595;</div>
+  </section>
+
+  <section class="screen" data-section>
+    <h2 class="elegant-title small-title">A little note</h2>
+    <div class="message-box">
+      <p>Happy birthday! Wishing you a day filled with laughter, good vibes, and all the little things that make you genuinely happy. Here's to another year of chasing big dreams, making great memories, and being exactly who you are &mdash; because that's more than enough. Cheers to you today!</p>
+      <p class="signature">&mdash; with love, Benjaminnnn</p>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">&#8595;</div>
+  </section>
+
+  <section class="screen" data-section>
+    <h2 class="elegant-title small-title">A flower just for you</h2>
+    <div class="flower-scene">
+      <div class="flower-bouquet">
+        <div class="flower f1"><div class="petals"><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="flower-center"></div></div>
+        <div class="flower f2"><div class="petals"><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="flower-center"></div></div>
+        <div class="flower f3"><div class="petals"><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="flower-center"></div></div>
+        <div class="leaf leaf-left"></div>
+        <div class="leaf leaf-right"></div>
+        <div class="stem"></div>
+        <div class="ribbon"></div>
+      </div>
+    </div>
+    <p class="flower-note">Purple for your favourite colour, pink for the one you never stop wearing &mdash; may your day keep blooming like this one.</p>
+    <div class="scroll-cue" aria-hidden="true">&#8595;</div>
+  </section>
+
+  <section class="screen" data-section>
+    <h2 class="elegant-title small-title">Make a wish</h2>
+    <button class="cake-scene" id="cakeScene" aria-label="Blow out the candles">
+      <div class="cake">
+        <div class="candle" id="candle1"><div class="flame"></div></div>
+        <div class="candle" id="candle2"><div class="flame"></div></div>
+        <div class="candle" id="candle3"><div class="flame"></div></div>
+        <div class="frosting-top"></div>
+        <div class="cake-layer layer-2"></div>
+        <div class="cake-layer layer-1"></div>
+        <div class="plate"></div>
+      </div>
+    </button>
+    <p class="wish-hint" id="wishHint">tap the cake to blow out the candles</p>
+    <div class="scroll-cue" aria-hidden="true">&#8595;</div>
+  </section>
+
+  <section class="screen" data-section>
+    <div class="closing-heart" aria-hidden="true">&#128156;</div>
+    <h2 class="elegant-title small-title">Happy Birthday</h2>
+    <p class="memory-caption">However you spend today, I hope it's soft, purple, a little bit pink, and completely yours.</p>
+  </section>
+
+</div>
+
+<div id="confetti-layer" aria-hidden="true"></div>
+
+<button id="miniPlayer" class="mini-player" aria-label="Pause song" hidden>
+  <span id="miniPlayerIcon" aria-hidden="true">&#9834;</span>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

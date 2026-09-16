@@ -1,0 +1,24 @@
+{
+  "name": "birthday",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test-bday.mjs screenshots"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bumai-Benjamin/Birthday.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Bumai-Benjamin/Birthday/issues"
+  },
+  "homepage": "https://github.com/Bumai-Benjamin/Birthday#readme",
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
